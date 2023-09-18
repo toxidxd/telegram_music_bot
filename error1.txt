@@ -1,0 +1,164 @@
+2018-01-29 08:32:07,077 (util.py:64 WorkerThread1) ERROR - TeleBot: "ConnectionError occurred, args=(ProtocolError('Connection aborted.', TimeoutError(110, 'Connection timed out')),)
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 560, in urlopen
+    body=body, headers=headers)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 354, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/lib/python3.5/http/client.py", line 1106, in request
+    self._send_request(method, url, body, headers)
+  File "/usr/lib/python3.5/http/client.py", line 1151, in _send_request
+    self.endheaders(body)
+  File "/usr/lib/python3.5/http/client.py", line 1102, in endheaders
+    self._send_output(message_body)
+  File "/usr/lib/python3.5/http/client.py", line 936, in _send_output
+    self.send(message_body)
+  File "/usr/lib/python3.5/http/client.py", line 908, in send
+    self.sock.sendall(data)
+  File "/usr/lib/python3.5/ssl.py", line 891, in sendall
+    v = self.send(data[count:])
+  File "/usr/lib/python3.5/ssl.py", line 861, in send
+    return self._sslobj.write(data)
+  File "/usr/lib/python3.5/ssl.py", line 586, in write
+    return self._sslobj.write(data)
+TimeoutError: [Errno 110] Connection timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/requests/adapters.py", line 376, in send
+    timeout=timeout
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 610, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 247, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/home/toxidxd/.local/lib/python3.5/site-packages/six.py", line 692, in reraise
+    raise value.with_traceback(tb)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 560, in urlopen
+    body=body, headers=headers)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 354, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/lib/python3.5/http/client.py", line 1106, in request
+    self._send_request(method, url, body, headers)
+  File "/usr/lib/python3.5/http/client.py", line 1151, in _send_request
+    self.endheaders(body)
+  File "/usr/lib/python3.5/http/client.py", line 1102, in endheaders
+    self._send_output(message_body)
+  File "/usr/lib/python3.5/http/client.py", line 936, in _send_output
+    self.send(message_body)
+  File "/usr/lib/python3.5/http/client.py", line 908, in send
+    self.sock.sendall(data)
+  File "/usr/lib/python3.5/ssl.py", line 891, in sendall
+    v = self.send(data[count:])
+  File "/usr/lib/python3.5/ssl.py", line 861, in send
+    return self._sslobj.write(data)
+  File "/usr/lib/python3.5/ssl.py", line 586, in write
+    return self._sslobj.write(data)
+requests.packages.urllib3.exceptions.ProtocolError: ('Connection aborted.', TimeoutError(110, 'Connection timed out'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/telebot/util.py", line 58, in run
+    task(*args, **kwargs)
+  File "bot.py", line 29, in musupload
+    msg = bot.send_audio(message.chat.id, f)
+  File "/usr/local/lib/python3.5/dist-packages/telebot/__init__.py", line 520, in send_audio
+    reply_markup, disable_notification, timeout))
+  File "/usr/local/lib/python3.5/dist-packages/telebot/apihelper.py", line 449, in send_audio
+    return _make_request(token, method_url, params=payload, files=files, method='post')
+  File "/usr/local/lib/python3.5/dist-packages/telebot/apihelper.py", line 54, in _make_request
+    timeout=(connect_timeout, read_timeout), proxies=proxy)
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 468, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 576, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/lib/python3/dist-packages/requests/adapters.py", line 426, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', TimeoutError(110, 'Connection timed out'))
+"
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 560, in urlopen
+    body=body, headers=headers)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 354, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/lib/python3.5/http/client.py", line 1106, in request
+    self._send_request(method, url, body, headers)
+  File "/usr/lib/python3.5/http/client.py", line 1151, in _send_request
+    self.endheaders(body)
+  File "/usr/lib/python3.5/http/client.py", line 1102, in endheaders
+    self._send_output(message_body)
+  File "/usr/lib/python3.5/http/client.py", line 936, in _send_output
+    self.send(message_body)
+  File "/usr/lib/python3.5/http/client.py", line 908, in send
+    self.sock.sendall(data)
+  File "/usr/lib/python3.5/ssl.py", line 891, in sendall
+    v = self.send(data[count:])
+  File "/usr/lib/python3.5/ssl.py", line 861, in send
+    return self._sslobj.write(data)
+  File "/usr/lib/python3.5/ssl.py", line 586, in write
+    return self._sslobj.write(data)
+TimeoutError: [Errno 110] Connection timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/requests/adapters.py", line 376, in send
+    timeout=timeout
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 610, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 247, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/home/toxidxd/.local/lib/python3.5/site-packages/six.py", line 692, in reraise
+    raise value.with_traceback(tb)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 560, in urlopen
+    body=body, headers=headers)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 354, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/usr/lib/python3.5/http/client.py", line 1106, in request
+    self._send_request(method, url, body, headers)
+  File "/usr/lib/python3.5/http/client.py", line 1151, in _send_request
+    self.endheaders(body)
+  File "/usr/lib/python3.5/http/client.py", line 1102, in endheaders
+    self._send_output(message_body)
+  File "/usr/lib/python3.5/http/client.py", line 936, in _send_output
+    self.send(message_body)
+  File "/usr/lib/python3.5/http/client.py", line 908, in send
+    self.sock.sendall(data)
+  File "/usr/lib/python3.5/ssl.py", line 891, in sendall
+    v = self.send(data[count:])
+  File "/usr/lib/python3.5/ssl.py", line 861, in send
+    return self._sslobj.write(data)
+  File "/usr/lib/python3.5/ssl.py", line 586, in write
+    return self._sslobj.write(data)
+requests.packages.urllib3.exceptions.ProtocolError: ('Connection aborted.', TimeoutError(110, 'Connection timed out'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "bot.py", line 101, in <module>
+    bot.polling()
+  File "/usr/local/lib/python3.5/dist-packages/telebot/__init__.py", line 264, in polling
+    self.__threaded_polling(none_stop, interval, timeout)
+  File "/usr/local/lib/python3.5/dist-packages/telebot/__init__.py", line 288, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "/usr/local/lib/python3.5/dist-packages/telebot/util.py", line 107, in raise_exceptions
+    six.reraise(self.exc_info[0], self.exc_info[1], self.exc_info[2])
+  File "/home/toxidxd/.local/lib/python3.5/site-packages/six.py", line 693, in reraise
+    raise value
+  File "/usr/local/lib/python3.5/dist-packages/telebot/util.py", line 58, in run
+    task(*args, **kwargs)
+  File "bot.py", line 29, in musupload
+    msg = bot.send_audio(message.chat.id, f)
+  File "/usr/local/lib/python3.5/dist-packages/telebot/__init__.py", line 520, in send_audio
+    reply_markup, disable_notification, timeout))
+  File "/usr/local/lib/python3.5/dist-packages/telebot/apihelper.py", line 449, in send_audio
+    return _make_request(token, method_url, params=payload, files=files, method='post')
+  File "/usr/local/lib/python3.5/dist-packages/telebot/apihelper.py", line 54, in _make_request
+    timeout=(connect_timeout, read_timeout), proxies=proxy)
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 468, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 576, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/lib/python3/dist-packages/requests/adapters.py", line 426, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', TimeoutError(110, 'Connection timed out'))
